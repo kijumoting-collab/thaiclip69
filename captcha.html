@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การตรวจสอบความปลอดภัย - Captcha</title>
+    <link rel="canonical" href="https://nama-domain-anda.com/home.html" />
+    <meta name="robots" content="noindex, follow">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        .container-banner {
+            width: 100%;
+            margin: 15px auto;
+            text-align: center;
+        }
+        .box {
+            background: #1e1e1e;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            border: 1px solid #2d2d2d;
+        }
+        h2 { margin-top: 0; color: #f1f1f1; font-size: 24px; }
+        p { color: #b3b3b3; font-size: 15px; line-height: 1.6; margin-bottom: 25px; }
+        .g-recaptcha { display: inline-block; margin-bottom: 10px; }
+        .sidebar-ads { display: block; }
+
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; }
+            .sidebar-ads { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (sessionStorage.getItem("age_verified") !== "passed") {
+            window.location.href = "index.html"; 
+        }
+    </script>
+
+    <div class="wrapper">
+        <div class="sidebar-ads">
+            <script>
+              atOptions = { 'key' : 'e132c6412476f3cc77d11b3519cd21b9', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
+            </script>
+            <script src="https://buffcasualwhine.com/e132c6412476f3cc77d11b3519cd21b9/invoke.js"></script>
+        </div>
+
+        <div class="main-content">
+            <div class="box">
+                <h2>การตรวจสอบความปลอดภัย</h2>
+                <p>กรุณาคลิกเครื่องหมายถูกในช่องด้านล่างเพื่อยืนยันว่าคุณไม่ใช่โปรแกรมอัตโนมัติ (บอท)</p>
+                
+                <div class="g-recaptcha" data-sitekey="6Lf31xQtAAAAAEvT2SWFb9AuQjJygDU_W23HuoO3" data-callback="captchaPassed"></div>
+            </div>
+
+            <div class="container-banner">
+                <script>
+                  atOptions = { 'key' : 'ee6fbbaee01d7a12aeeb5d58f3126e1f', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+                </script>
+                <script src="https://buffcasualwhine.com/ee6fbbaee01d7a12aeeb5d58f3126e1f/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function captchaPassed(response) {
+            if (response.length !== 0) {
+                sessionStorage.setItem("captcha_verified", "passed");
+                window.location.href = "home.html";
+            }
+        }
+    </script>
+</body>
+</html>
