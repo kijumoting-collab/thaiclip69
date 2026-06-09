@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /home.html
+Disallow: /index.html
+Disallow: /captcha.html
+
+# Beritahu mesin pencari lokasi sitemap Anda
+Sitemap: https://thaiclip69.pages.dev/sitemap.xml
